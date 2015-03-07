@@ -30,6 +30,10 @@ public partial class my_account : System.Web.UI.Page
         
     protected void ButtonUpload_Click(object sender, EventArgs e)
     {
+        TextBoxURL.Text = TextBoxURL.Text.Replace("https://www.youtube.com/watch?v=", "");
+        TextBoxURL.Text = TextBoxURL.Text.Replace("http://www.youtube.com/watch?v=", "");
+        TextBoxURL.Text = TextBoxURL.Text.Replace("www.youtube.com/watch?v=", "");
+
         SqlConnection con = new SqlConnection();
         con.ConnectionString = ConfigurationManager.ConnectionStrings["DatabaseConnectionString1"].ToString();
         SqlCommand cmd = new SqlCommand();
