@@ -47,7 +47,7 @@
 
         <asp:Repeater ID="RepeaterVideos" runat="server">
             <ItemTemplate>
-                <a href="video.aspx?id=<%# Eval("Id") %>"><h2><%# Eval("Title") %></h2></a>
+                <a href="video.aspx?id=<%# Eval("id") %>"><img src="http://img.youtube.com/vi/<%# Eval("URL") %>/0.jpg" width="100" /></a><a href="video.aspx?id=<%# Eval("Id") %>"><h2><%# Eval("Title") %></h2></a>
                 <span>Uploadet af: <%# Eval("Username") %></span>
             </ItemTemplate>
         </asp:Repeater>
